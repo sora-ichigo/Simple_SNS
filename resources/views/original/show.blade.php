@@ -18,12 +18,12 @@
         <tbody>
             <tr>
                 <th scope="row">{{$thing->id}}</th>
-                <td><a href="{{route('user.index',['id'=>$thing->user_id])}}">{{$thing->user->name}}</a></td>
+                <td><a href="{{route('user.index',['user'=>$thing->user_id])}}">{{$thing->user->name}}</a></td>
                 <td>{{$thing->title}}</td>
                 <td>{{$thing->content}}</td>
                 @if($thing->user_id==$user->id)
-                    <td><a href="{{route('edit',['id'=>$thing->id])}}">to edit</a></td>
-                    <td><a href="{{route('delete',['id'=>$thing->id])}}">to delete</a></td>
+                    <td><a href="{{route('edit',['thing'=>$thing->id])}}">to edit</a></td>
+                    <td><a href="{{route('delete',['thing'=>$thing->id])}}">to delete</a></td>
                 @endif
             </tr>
         </tbody>

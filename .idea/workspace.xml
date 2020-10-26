@@ -147,7 +147,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-sample-project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,6 +180,7 @@
       <workItem from="1603256791254" duration="19655000" />
       <workItem from="1603326280872" duration="7380000" />
       <workItem from="1603342697249" duration="24000" />
+      <workItem from="1603674924468" duration="5149000" />
     </task>
     <servers />
   </component>
@@ -207,10 +208,10 @@
       <screen x="0" y="0" width="1368" height="882" />
     </state>
     <state x="522" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1368.882@0.0.1368.882" timestamp="1603333701846" />
-    <state x="455" y="202" width="672" height="570" key="search.everywhere.popup" timestamp="1603330658610">
+    <state x="466" y="213" width="672" height="570" key="search.everywhere.popup" timestamp="1603679608411">
       <screen x="0" y="0" width="1368" height="882" />
     </state>
     <state x="1132" y="-853" width="672" height="678" key="search.everywhere.popup/0.0.1368.882/509.-1080.1920.1050@509.-1080.1920.1050" timestamp="1603291967063" />
-    <state x="455" y="202" width="672" height="570" key="search.everywhere.popup/0.0.1368.882@0.0.1368.882" timestamp="1603330658610" />
+    <state x="466" y="213" width="672" height="570" key="search.everywhere.popup/0.0.1368.882@0.0.1368.882" timestamp="1603679608411" />
   </component>
 </project>

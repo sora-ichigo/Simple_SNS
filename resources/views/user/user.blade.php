@@ -15,11 +15,11 @@
         <tbody>
             @foreach($things as $thing)
                 <tr>
-                    <th scope="row"><a href="{{route('show',['id'=>$thing->id])}}">{{$thing->id}}</a></th>
+                    <th scope="row"><a href="{{route('show',['thing'=>$thing->id])}}">{{$thing->id}}</a></th>
                     <td>{{$thing->title}}</td>
                     @if($user->id==\Illuminate\Support\Facades\Auth::id())
-                        <td><a href="{{route('edit',['id'=>$thing->id])}}">to edit</a></td>
-                        <td><a href="{{route('delete',['id'=>$thing->id])}}">to delete</a></td>
+                        <td><a href="{{route('edit',['thing'=>$thing->id])}}">to edit</a></td>
+                        <td><a href="{{route('delete',['thing'=>$thing->id])}}">to delete</a></td>
                     @endif
                 </tr>
             @endforeach

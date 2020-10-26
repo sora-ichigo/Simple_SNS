@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index($id)
+    public function index(User $user)
     {
-        $user=User::find($id);
         $things=$user->things()->get();
         return view('user.user',['user'=>$user,'things'=>$things]);
     }

@@ -17,15 +17,15 @@ use \App\Http\Controllers\UserController;
 */
 
 Route::get('/', [ThingController::class, 'index'])->name('index')->middleware('auth');
-Route::get('/{id}/show', [ThingController::class, 'show'])->name('show')->middleware('auth');
+Route::get('/{thing}/show', [ThingController::class, 'show'])->name('show')->middleware('auth');
 Route::get('/add', [ThingController::class, 'add'])->name('add')->middleware('auth');
 Route::post('/add', [ThingController::class, 'create'])->middleware('auth');
-Route::get('/{id}/edit', [ThingController::class, 'edit'])->name('edit')->middleware('auth')->middleware('user');
-Route::post('/{id}/edit', [ThingController::class, 'update'])->middleware('user');
-Route::get('/{id}/delete', [ThingController::class, 'delete'])->name('delete')->middleware('auth')->middleware('user');
-Route::post('/{id}/delete', [ThingController::class, 'remove'])->middleware('auth')->middleware('user');
+Route::get('/{thing}/edit', [ThingController::class, 'edit'])->name('edit')->middleware('auth')->middleware('user');
+Route::post('/{thing}/edit', [ThingController::class, 'update'])->middleware('user');
+Route::get('/{thing}/delete', [ThingController::class, 'delete'])->name('delete')->middleware('auth')->middleware('user');
+Route::post('/{thing}/delete', [ThingController::class, 'remove'])->middleware('auth')->middleware('user');
 
-Route::get('/user/{id}',[UserController::class,'index'])->name('user.index')->middleware('auth');
+Route::get('/user/{user}',[UserController::class,'index'])->name('user.index')->middleware('auth');
 
 
 Route::get('/logout', function () {

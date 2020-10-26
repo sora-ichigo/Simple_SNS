@@ -21,8 +21,7 @@ class UserMiddleWare
         //ログインユーザーIDを取得
         $loginId = Auth::id();
         //投稿情報のユーザーIDを取得
-        $requestId = $request->id;
-        $id=Thing::find($requestId)->user_id;
+        $id=$request->thing->user_id;
 
         //ログイン者と投稿情報作成者が一致しなければ別のページにリダイレクト
         if ($loginId != $id) {

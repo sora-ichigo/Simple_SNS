@@ -17,12 +17,12 @@
         <tbody>
             @foreach($things as $thing)
             <tr>
-                <th scope="row"><a href="{{route('show',['id'=>$thing->id])}}">{{$thing->id}}</a></th>
-                <td><a href="{{route('user.index',['id'=>$thing->user_id])}}">{{$thing->user->name}}</a></td>
+                <th scope="row"><a href="{{route('show',['thing'=>$thing->id])}}">{{$thing->id}}</a></th>
+                <td><a href="{{route('user.index',['user'=>$thing->user_id])}}">{{$thing->user->name}}</a></td>
                 <td>{{$thing->title}}</td>
                 @if($thing->user_id==$user->id)
-                <td><a href="{{route('edit',['id'=>$thing->id])}}">to edit</a></td>
-                <td><a href="{{route('delete',['id'=>$thing->id])}}">to delete</a></td>
+                <td><a href="{{route('edit',['thing'=>$thing->id])}}">to edit</a></td>
+                <td><a href="{{route('delete',['thing'=>$thing->id])}}">to delete</a></td>
                 @endif
             </tr>
             @endforeach

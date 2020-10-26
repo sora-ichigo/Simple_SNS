@@ -29,34 +29,29 @@ class ThingController extends Controller
         return redirect(route('index'));
     }
 
-    public function show($id)
+    public function show(Thing $thing)
     {
-        $thing = Thing::find($id);
         return view('original.show',['thing'=>$thing]);
     }
 
-    public function edit($id)
+    public function edit(Thing $thing)
     {
-        $thing = Thing::find($id);
         return view('original.edit',['thing'=>$thing]);
     }
 
-    public function update($id,ThingRequest $request)
+    public function update(Thing $thing,ThingRequest $request)
     {
-        $thing=Thing::find($id);
         $thing->fill($request->all())->save();
         return redirect(route('index'));
     }
 
-    public function delete($id)
+    public function delete(Thing $thing)
     {
-        $thing = Thing::find($id);
         return view('original.delete',['thing'=>$thing]);
     }
 
-    public function remove($id)
+    public function remove(Thing $thing)
     {
-        $thing = Thing::find($id);
         $thing->delete();
         return redirect(route('index'));
     }
