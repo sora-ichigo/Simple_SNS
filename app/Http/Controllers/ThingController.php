@@ -21,6 +21,7 @@ class ThingController extends Controller
         return view('original.add');
     }
 
+
     public function create(ThingRequest $request)
     {
         $thing = new Thing();
