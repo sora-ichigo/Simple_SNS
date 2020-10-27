@@ -13,17 +13,16 @@ class LikeController extends Controller
     {
         $user_id = Auth::id();
         $thing_id = $request->thing_id;
-        $is_like=$this->is_like($thing_id, $user_id);
+        $is_like=Like::is_like($thing_id,$user_id);
         if ($is_like) {
-            $this->like($thing_id, $user_id);
-        } else {
             $this->unlike($thing_id, $user_id);
+        } else {
+            $this->like($thing_id, $user_id);
         }
 
         //下記の記述でajaxに引数の値を返す
         $postLikesCount = count(Like::where("thing_id",$thing_id)->get());
         $json = [
-            // 'postLikesCount' => $postLikesCount,
             'thing_id' => $thing_id,
             'user_id' => $user_id,
             'likes_count'=>$postLikesCount,
@@ -44,16 +43,5 @@ class LikeController extends Controller
     public function unlike($thing_id, $user_id)
     {
         Like::where('user_id', $user_id)->where('thing_id', $thing_id)->delete();
-    }
-
-    public function is_like($thing_id, $user_id)
-    {
-        $is_like = Like::where('user_id', $user_id)->where('thing_id', $thing_id)->first();
-
-        if ($is_like == null) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }

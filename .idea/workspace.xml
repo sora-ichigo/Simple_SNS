@@ -3,13 +3,28 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4402014-aba4-4a0a-94c5-fb3239ae3904" name="Default Changelist" comment="">
+    <list default="true" id="c4402014-aba4-4a0a-94c5-fb3239ae3904" name="Default Changelist" comment="update: 最初からいいね済みの表示を赤にする">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/original/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/original/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,12 +208,35 @@
       <workItem from="1603701144627" duration="1034000" />
       <workItem from="1603702967436" duration="10633000" />
       <workItem from="1603765967222" duration="3072000" />
-      <workItem from="1603798537578" duration="516000" />
+      <workItem from="1603798537578" duration="1365000" />
     </task>
+    <task id="LOCAL-00001" summary="update: 最初からいいね済みの表示を赤にする">
+      <created>1603799225796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603799225796</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update: 最初からいいね済みの表示を赤にする" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: 最初からいいね済みの表示を赤にする" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603257107335">
