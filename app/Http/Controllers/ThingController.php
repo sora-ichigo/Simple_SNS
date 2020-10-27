@@ -12,6 +12,7 @@ class ThingController extends Controller
 {
     public function index()
     {
+
         $things = Thing::all();
         return view('original.index',['things'=>$things]);
     }
@@ -20,6 +21,7 @@ class ThingController extends Controller
     {
         return view('original.add');
     }
+
 
     public function create(ThingRequest $request)
     {
