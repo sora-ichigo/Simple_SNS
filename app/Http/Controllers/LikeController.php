@@ -13,7 +13,8 @@ class LikeController extends Controller
     {
         $user_id = Auth::id();
         $thing_id = $request->thing_id;
-        if ($this->is_like($thing_id, $user_id)) {
+        $is_like=$this->is_like($thing_id, $user_id);
+        if ($is_like) {
             $this->like($thing_id, $user_id);
         } else {
             $this->unlike($thing_id, $user_id);
@@ -26,6 +27,7 @@ class LikeController extends Controller
             'thing_id' => $thing_id,
             'user_id' => $user_id,
             'likes_count'=>$postLikesCount,
+            'is_like'=>$is_like,
         ];
 
         //下記の記述でajaxに引数の値を返す

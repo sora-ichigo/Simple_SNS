@@ -28,7 +28,16 @@
                         <td></td>
                         <td></td>
                     @endif
-                    <td class="toggle_like" data-thing="{{$thing->id}}"><a><span>{{count($thing->likes()->get())}}</span> <i class="fas fa-heart"></i></a></td>
+
+                    @if(App\Models\Like::is_like($thing->id,\Illuminate\Support\Facades\Auth::id()))
+                        <td class="toggle_like like" data-thing="{{$thing->id}}">
+                            <a><span>{{count($thing->likes()->get())}}</span> <i class="fas fa-heart"></i></a>
+                    @else
+                        </td><td class="toggle_like" data-thing="{{$thing->id}}">
+                            <a><span>{{count($thing->likes()->get())}}</span> <i class="fas fa-heart"></i></a>
+                        </td>
+                    @endif
+
                 </tr>
             @endforeach
         </tbody>

@@ -21,4 +21,15 @@ class Like extends Model
     {
         return $this->belongsTo(Thing::class);
     }
+
+    public static function is_like($thing_id, $user_id)
+    {
+        $is_like = Like::where('user_id', $user_id)->where('thing_id', $thing_id)->first();
+
+        if ($is_like == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
