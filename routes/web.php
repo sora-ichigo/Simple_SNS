@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ThingController;
 use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\LikeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+    /*
+    |--------------------------------------------------------------------------
+    | Web Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register web routes for your application. These
+    | routes are loaded by the RouteServiceProvider within a group which
+    | contains the "web" middleware group. Now create something great!
+    |
+    */
 
 Route::get('/', [ThingController::class, 'index'])->name('index')->middleware('auth');
 Route::get('/{thing}/show', [ThingController::class, 'show'])->name('show')->middleware('auth');
@@ -26,6 +28,10 @@ Route::get('/{thing}/delete', [ThingController::class, 'delete'])->name('delete'
 Route::post('/{thing}/delete', [ThingController::class, 'remove'])->middleware('auth')->middleware('user');
 
 Route::get('/user/{user}',[UserController::class,'index'])->name('user.index')->middleware('auth');
+
+Route::get('/like',
+    [LikeController::class, 'do_like'])->name('like')->middleware('auth');
+
 
 
 Route::get('/logout', function () {
