@@ -2,3 +2,7 @@ td.like {
     color: red;
     /*text-decoration: none;*/
 }
+
+td.toggle_like{
+    cursor: pointer;
+}

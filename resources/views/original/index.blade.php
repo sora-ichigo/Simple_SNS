@@ -4,6 +4,7 @@
 
 @section('content')
 
+    <a href="{{route('add')}}" class="btn btn-primary">add</a>
     <table class="table">
         <thead>
             <tr>
@@ -42,6 +43,8 @@
             @endforeach
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+        {{ $things->links('vendor.pagination.bootstrap-4') }}
+    </div>
 
-    <a href="{{route('add')}}" class="btn btn-primary">add</a>
 @endsection

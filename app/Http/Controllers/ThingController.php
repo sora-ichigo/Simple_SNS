@@ -13,7 +13,7 @@ class ThingController extends Controller
     public function index()
     {
 
-        $things = Thing::all();
+        $things = Thing::paginate(10);
         return view('original.index',['things'=>$things]);
     }
 
