@@ -5,11 +5,12 @@ $(function () {
     like.click( function () {
         var $this = $(this)
         thing_id = $this.data('thing')
+        route=$this.data('route')
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: 'like',  //routeの記述
+            url: route,  //routeの記述
             type: 'GET', //受け取り方法の記述（GETもある）
             data: {
                 'thing_id': thing_id //コントローラーに渡すパラメーター
