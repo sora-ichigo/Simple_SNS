@@ -13,17 +13,30 @@
                 <th scope="col">content</th>
                 <th scope="col">edit</th>
                 <th scope="col">delete</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <tr>
                 <th scope="row">{{$thing->id}}</th>
                 <td><a href="{{route('user.index',['user'=>$thing->user_id])}}">{{$thing->user->name}}</a></td>
                 <td>{{$thing->title}}</td>
-                <td>{{$thing->content}}</td>
                 @if($thing->user_id==$user->id)
                     <td><a href="{{route('edit',['thing'=>$thing->id])}}">to edit</a></td>
                     <td><a href="{{route('delete',['thing'=>$thing->id])}}">to delete</a></td>
+                @else
+                    <td></td>
+                    <td></td>
+                @endif
+
+                @if(App\Models\Like::is_like($thing->id,\Illuminate\Support\Facades\Auth::id()))
+                    <td class="toggle_like like" data-thing="{{$thing->id}}" data-route="{{route('like')}}">
+                        <a><span>{{count($thing->likes()->get())}}</span> <i class="fas fa-heart"></i></a>
+                        @else
+                    </td><td class="toggle_like" data-thing="{{$thing->id}}"  data-route="{{route('like')}}">
+                        <a><span>{{count($thing->likes()->get())}}</span> <i class="fas fa-heart"></i></a>
+                    </td>
                 @endif
             </tr>
         </tbody>
