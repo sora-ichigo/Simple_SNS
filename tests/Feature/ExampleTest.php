@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Database\Factories\UserFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ExampleTest extends TestCase
 {
@@ -15,7 +17,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->actingAs(User::Create(['name'=>'aaa','email'=>'aaa@aa.com','email_verified_at','password'=>'aaa']))->get('/');
+        $user = User::factory()->make();
+        $response = $this->actingAs($user)
+            ->get('/');
         $response->assertStatus(200);
     }
 }

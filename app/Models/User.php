@@ -74,4 +74,25 @@ class User extends Authenticatable
         'created' => UserCreated::class
     ];
 
+    /**
+     * ファクトリに対応するモデルの名前
+     *
+     * @var string
+     */
+    protected $model = User::class;
+
+    /**
+     * モデルファクトリの設定
+     *
+     * @return $this
+     */
+    public function configure()
+    {
+        return $this->afterMaking(function (User $user) {
+            //
+        })->afterCreating(function (User $user) {
+            //
+        });
+    }
+
 }
