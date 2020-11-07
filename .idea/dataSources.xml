@@ -10,5 +10,11 @@
         <property name="serverTimezone" value="UTC" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="heroku_f3a36a22f116ca0@us-cdbr-east-02.cleardb.com" uuid="7152b8d7-0748-4063-8501-29d464397c18">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://us-cdbr-east-02.cleardb.com:3306/heroku_f3a36a22f116ca0</jdbc-url>
+    </data-source>
   </component>
 </project>
