@@ -17,39 +17,39 @@ class ThingSeeder extends Seeder
     public function run()
     {
         DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
+            'title' => 'テスト1',
+            'content' => 'これはテストです。',
             'user_id'=>1,
         ]);
         DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
+            'title' => 'テスト2',
+            'content' => 'これはテストです。',
             'user_id'=>1,
         ]);
         DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
-            'user_id'=>1,
+            'title' => 'テスト3',
+            'content' => 'これはテストです。',
+            'user_id'=>2,
         ]);
         DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
-            'user_id'=>1,
+            'title' => 'テスト4',
+            'content' => 'これはテストです。',
+            'user_id'=>2,
         ]);
         DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
+            'title' => 'テスト5',
+            'content' => 'これはテストです。',
+            'user_id'=>3,
+        ]);
+        DB::table('things')->insert([
+            'title' => 'テスト6',
+            'content' => 'これはテストです。',
+            'user_id'=>3,
+        ]);
+        DB::table('things')->insert([
+            'title' => 'テスト7',
+            'content' => 'これはテストです。',
             'user_id'=>4,
-        ]);
-        DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
-            'user_id'=>6,
-        ]);
-        DB::table('things')->insert([
-            'title' => Str::random(5),
-            'content' => Str::random(10),
-            'user_id'=>5,
         ]);
     }
 }

@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo/>
+{{--            <x-jet-authentication-card-logo/>--}}
+            <img src="{{asset('/img/360.png')}}" alt="" width="70" style="border-radius: 50%; transform:rotate(45deg);">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4"/>
@@ -12,6 +13,9 @@
             </div>
         @endif
 
+        <p>テストアカウントでログイン出来ます。</p>
+        <p>メール：test@example.com</p>
+        <p>パスワード：password</p>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
