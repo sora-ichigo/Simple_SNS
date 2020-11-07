@@ -19,10 +19,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4402014-aba4-4a0a-94c5-fb3239ae3904" name="Default Changelist" comment="update: heroku用にデータベース設定を変更">
+    <list default="true" id="c4402014-aba4-4a0a-94c5-fb3239ae3904" name="Default Changelist" comment="fixed: seederを修正">
+      <change afterPath="$PROJECT_DIR$/img/360.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ThingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ThingSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fixed-auth" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -185,13 +185,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\todo\resources\lang\ja" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\todo\img" />
       <recent name="C:\xampp\htdocs\todo" />
       <recent name="C:\xampp\htdocs\todo\resources\views\user" />
       <recent name="C:\xampp\htdocs\todo\resources\views\original" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\todo\resources\lang\ja" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604670319209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed: seederを修正">
+      <created>1604763972321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604763972321</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +280,8 @@
     <MESSAGE value="update: ページネーションを追加" />
     <MESSAGE value="update: heroku用にデータベース設定を変更" />
     <MESSAGE value="fixed: auth周りを日本語にした" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed: auth周りを日本語にした" />
+    <MESSAGE value="fixed: seederを修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed: seederを修正" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604671194087">
